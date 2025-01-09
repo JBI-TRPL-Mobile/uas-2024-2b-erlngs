@@ -46,6 +46,40 @@ class _MessagesScreenState extends State<MessagesScreen> {
                 );
               },
             ),
+            bottomNavigationBar: BottomNavigationBar(
+  backgroundColor: Colors.white, // Set background color to white
+  type: BottomNavigationBarType.fixed, // Ensure all items are shown
+  items: [
+    BottomNavigationBarItem(
+      icon: Icon(Icons.home),
+      label: "Home",
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.notifications),
+      label: "Notification",
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.message),
+      label: "Message",
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.person),
+      label: "Profile",
+    ),
+  ],
+  currentIndex: 2, // Set to Profile tab
+  onTap: (index) {
+    if (index == 0) {
+      Navigator.pushReplacementNamed(context, '/home');
+    } else if (index == 1) {
+      Navigator.pushReplacementNamed(context, '/notification');
+    } else if (index == 2) {
+      Navigator.pushReplacementNamed(context, '/messages');
+    } else if (index == 3) {
+      Navigator.pushReplacementNamed(context, '/profile');
+    }
+  },
+),
     );
   }
 }

@@ -98,20 +98,39 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 0,
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.message), label: "Messages"),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
-        ],
-        onTap: (index) {
-          if (index == 1) {
-            Navigator.pushNamed(context, '/messages');
-          } else if (index == 2) {
-            Navigator.pushNamed(context, '/profile');
-          }
-        },
-      ),
+  backgroundColor: Colors.white, // Set background color to white
+  type: BottomNavigationBarType.fixed, // Ensure all items are shown
+  items: [
+    BottomNavigationBarItem(
+      icon: Icon(Icons.home),
+      label: "Home",
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.notifications),
+      label: "Notification",
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.message),
+      label: "Message",
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.person),
+      label: "Profile",
+    ),
+  ],
+  currentIndex: 0, // Set to Profile tab
+  onTap: (index) {
+    if (index == 0) {
+      Navigator.pushReplacementNamed(context, '/home');
+    } else if (index == 1) {
+      Navigator.pushReplacementNamed(context, '/notification');
+    } else if (index == 2) {
+      Navigator.pushReplacementNamed(context, '/messages');
+    } else if (index == 3) {
+      Navigator.pushReplacementNamed(context, '/profile');
+    }
+  },
+),
     );
   }
 
