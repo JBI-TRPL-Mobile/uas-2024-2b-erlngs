@@ -41,6 +41,13 @@ class _MessagesScreenState extends State<MessagesScreen> {
           },
         ),
         actions: [
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: () {
+              // Tambahkan logika untuk pencarian
+              print("Search button tapped");
+            },
+          ),
           PopupMenuButton<String>(
             onSelected: (value) {
               // Tambahkan logika untuk item menu yang dipilih
@@ -55,13 +62,6 @@ class _MessagesScreenState extends State<MessagesScreen> {
               }).toList();
             },
           ),
-          IconButton(
-            icon: Icon(Icons.search),
-            onPressed: () {
-              // Tambahkan logika untuk pencarian
-              print("Search button tapped");
-            },
-          ),
         ],
       ),
       body: messages.isEmpty
@@ -71,6 +71,9 @@ class _MessagesScreenState extends State<MessagesScreen> {
               itemBuilder: (context, index) {
                 final message = messages[index];
                 return ListTile(
+                  leading: CircleAvatar(
+                    backgroundImage: AssetImage(message.imageUrl), // Menampilkan gambar
+                  ),
                   title: Text(message.sender),
                   subtitle: Text(message.message),
                   trailing: Text(message.timestamp),

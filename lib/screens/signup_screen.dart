@@ -76,7 +76,7 @@ class _SignupScreenState extends State<SignupScreen> {
       id: users.length + 1,
       name: name,
       email: email,
-      profilePicture: 'lib/assets/IMG_2069.jpg',
+      profilePicture: 'lib/assets/Gambar WhatsApp 2024-05-23 pukul 20.38.48_23ebf208.jpg',
     );
 
     setState(() {

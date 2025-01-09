@@ -3,13 +3,43 @@
       "id": 1,
       "sender": "User 1",
       "message": "Hello, apa kabar?",
-      "timestamp": "2025-01-01 10:00:00"
+      "timestamp": "2025-01-01 10:00:00",
+      "imageUrl": "lib/assets/wallhaven-3lepy9.jpg"
     },
     {
       "id": 2,
       "sender": "User 2",
       "message": "Let's go",
-      "timestamp": "2025-01-02 12:00:00"
+      "timestamp": "2025-01-02 12:00:00",
+      "imageUrl": "lib/assets/wallhaven-3lepy9.jpg"
+    },
+    {
+      "id": 3,
+      "sender": "User 3",
+      "message": "Hello, apa kabar?",
+      "timestamp": "2025-01-01 10:00:00",
+      "imageUrl": "lib/assets/wallhaven-3lepy9.jpg"
+    },
+    {
+      "id": 4,
+      "sender": "User 4",
+      "message": "Let's go",
+      "timestamp": "2025-01-02 12:00:00",
+      "imageUrl": "lib/assets/wallhaven-3lepy9.jpg"
+    },
+    {
+      "id": 5,
+      "sender": "User 5",
+      "message": "Hello, apa kabar?",
+      "timestamp": "2025-01-01 10:00:00",
+      "imageUrl": "lib/assets/wallhaven-3lepy9.jpg"
+    },
+    {
+      "id": 6,
+      "sender": "User 6",
+      "message": "Let's go",
+      "timestamp": "2025-01-02 12:00:00",
+      "imageUrl": "lib/assets/wallhaven-3lepy9.jpg"
     }
   ]
   
