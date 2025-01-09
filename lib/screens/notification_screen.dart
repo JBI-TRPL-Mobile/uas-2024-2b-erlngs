@@ -54,7 +54,16 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
           onPressed: () {
             Navigator.pushReplacementNamed(context, '/home'); // Navigasi ke HomeScreen
           },
+          
         ),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.notifications),
+            onPressed: () {
+              Navigator.pushReplacementNamed(context, '/notifications'); // Navigasi ke layar Notifications
+            },
+          ),
+        ],
       ),
       body: notifications.isEmpty
           ? Center(child: CircularProgressIndicator())

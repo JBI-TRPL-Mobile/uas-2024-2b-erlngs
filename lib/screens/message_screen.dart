@@ -30,7 +30,7 @@ class _MessagesScreenState extends State<MessagesScreen> {
   }
 
   @override
-   Widget build(BuildContext context) {
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("Messages"),
@@ -40,6 +40,29 @@ class _MessagesScreenState extends State<MessagesScreen> {
             Navigator.pushReplacementNamed(context, '/home'); // Navigasi ke HomeScreen
           },
         ),
+        actions: [
+          PopupMenuButton<String>(
+            onSelected: (value) {
+              // Tambahkan logika untuk item menu yang dipilih
+              print("Menu item selected: $value");
+            },
+            itemBuilder: (BuildContext context) {
+              return {'Settings', 'Logout'}.map((String choice) {
+                return PopupMenuItem<String>(
+                  value: choice,
+                  child: Text(choice),
+                );
+              }).toList();
+            },
+          ),
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: () {
+              // Tambahkan logika untuk pencarian
+              print("Search button tapped");
+            },
+          ),
+        ],
       ),
       body: messages.isEmpty
           ? Center(child: CircularProgressIndicator())
@@ -54,40 +77,40 @@ class _MessagesScreenState extends State<MessagesScreen> {
                 );
               },
             ),
-            bottomNavigationBar: BottomNavigationBar(
-  backgroundColor: Colors.white, // Set background color to white
-  type: BottomNavigationBarType.fixed, // Ensure all items are shown
-  items: [
-    BottomNavigationBarItem(
-      icon: Icon(Icons.home),
-      label: "Home",
-    ),
-    BottomNavigationBarItem(
-      icon: Icon(Icons.notifications),
-      label: "Notification",
-    ),
-    BottomNavigationBarItem(
-      icon: Icon(Icons.message),
-      label: "Message",
-    ),
-    BottomNavigationBarItem(
-      icon: Icon(Icons.person),
-      label: "Profile",
-    ),
-  ],
-  currentIndex: 2, // Set to Profile tab
-  onTap: (index) {
-    if (index == 0) {
-      Navigator.pushReplacementNamed(context, '/home');
-    } else if (index == 1) {
-      Navigator.pushReplacementNamed(context, '/notifications');
-    } else if (index == 2) {
-      Navigator.pushReplacementNamed(context, '/messages');
-    } else if (index == 3) {
-      Navigator.pushReplacementNamed(context, '/profile');
-    }
-  },
-),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.white,
+        type: BottomNavigationBarType.fixed,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: "Home",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.notifications),
+            label: "Notification",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.message),
+            label: "Message",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: "Profile",
+          ),
+        ],
+        currentIndex: 2,
+        onTap: (index) {
+          if (index == 0) {
+            Navigator.pushReplacementNamed(context, '/home');
+          } else if (index == 1) {
+            Navigator.pushReplacementNamed(context, '/notifications');
+          } else if (index == 2) {
+            Navigator.pushReplacementNamed(context, '/messages');
+          } else if (index == 3) {
+            Navigator.pushReplacementNamed(context, '/profile');
+          }
+        },
+      ),
     );
   }
 }
