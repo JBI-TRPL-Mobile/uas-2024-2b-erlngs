@@ -72,7 +72,7 @@ class _MessagesScreenState extends State<MessagesScreen> {
     if (index == 0) {
       Navigator.pushReplacementNamed(context, '/home');
     } else if (index == 1) {
-      Navigator.pushReplacementNamed(context, '/notification');
+      Navigator.pushReplacementNamed(context, '/notifications');
     } else if (index == 2) {
       Navigator.pushReplacementNamed(context, '/messages');
     } else if (index == 3) {

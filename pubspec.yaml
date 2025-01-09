@@ -63,6 +63,7 @@ flutter:
   assets:
   - lib/data/datauser.json
   - lib/data/datamessage.json
+  - lib/data/datanotification.json
   - lib/assets/Gambar WhatsApp 2024-05-23 pukul 20.38.48_23ebf208.jpg
   - lib/assets/IMG_2069.jpg
   #   - images/a_dot_ham.jpeg

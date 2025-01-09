@@ -22,7 +22,7 @@ Widget createApp() {
       '/home': (context) => HomeScreen(),
       '/messages': (context) => MessagesScreen(),
       '/profile': (context) => ProfileScreen(),
-      '/notifications': (context) => NotificationScreen(),
+      '/notifications': (context) => NotificationsScreen(),
     },
   );
 }

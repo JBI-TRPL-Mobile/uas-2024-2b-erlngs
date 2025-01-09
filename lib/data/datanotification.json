@@ -1,0 +1,13 @@
+[
+    {
+      "title": "New Comment",
+      "content": "You have a new comment on your post.",
+      "timestamp": "10:00 AM"
+    },
+    {
+      "title": "New Like",
+      "content": "Someone liked your post.",
+      "timestamp": "09:45 AM"
+    }
+  ]
+  
