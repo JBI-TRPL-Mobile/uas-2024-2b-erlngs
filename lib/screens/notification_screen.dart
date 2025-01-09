@@ -45,9 +45,17 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
   }
 
   @override
-  Widget build(BuildContext context) {
+   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Notifications")),
+      appBar: AppBar(
+        title: Text("Notification"),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pushReplacementNamed(context, '/home'); // Navigasi ke HomeScreen
+          },
+        ),
+      ),
       body: notifications.isEmpty
           ? Center(child: CircularProgressIndicator())
           : ListView.builder(

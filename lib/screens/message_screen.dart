@@ -30,9 +30,17 @@ class _MessagesScreenState extends State<MessagesScreen> {
   }
 
   @override
-  Widget build(BuildContext context) {
+   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Messages")),
+      appBar: AppBar(
+        title: Text("Messages"),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pushReplacementNamed(context, '/home'); // Navigasi ke HomeScreen
+          },
+        ),
+      ),
       body: messages.isEmpty
           ? Center(child: CircularProgressIndicator())
           : ListView.builder(
