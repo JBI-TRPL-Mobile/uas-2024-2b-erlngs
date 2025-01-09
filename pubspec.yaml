@@ -30,6 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  path_provider: ^2.0.13
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -60,7 +61,10 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+  - lib/data/datauser.json
+  - lib/data/datamessage.json
   - lib/assets/Gambar WhatsApp 2024-05-23 pukul 20.38.48_23ebf208.jpg
+  - lib/assets/IMG_2069.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
