@@ -45,7 +45,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
   }
 
   @override
-   Widget build(BuildContext context) {
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("Notification"),
@@ -54,7 +54,6 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
           onPressed: () {
             Navigator.pushReplacementNamed(context, '/home'); // Navigasi ke HomeScreen
           },
-          
         ),
         actions: [
           IconButton(
@@ -71,10 +70,49 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
               itemCount: notifications.length,
               itemBuilder: (context, index) {
                 final notification = notifications[index];
-                return ListTile(
-                  title: Text(notification.title),
-                  subtitle: Text(notification.content),
-                  trailing: Text(notification.timestamp),
+                return Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    padding: const EdgeInsets.all(16.0),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(color: Colors.grey),
+                      borderRadius: BorderRadius.circular(8.0),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.1),
+                          spreadRadius: 1,
+                          blurRadius: 5,
+                          offset: Offset(0, 3),
+                        ),
+                      ],
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          notification.title,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16.0,
+                          ),
+                        ),
+                        SizedBox(height: 8.0),
+                        Text(notification.content),
+                        SizedBox(height: 8.0),
+                        Align(
+                          alignment: Alignment.bottomRight,
+                          child: Text(
+                            notification.timestamp,
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 12.0,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 );
               },
             ),

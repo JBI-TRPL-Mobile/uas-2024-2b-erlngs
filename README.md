@@ -19,3 +19,7 @@ Tampilan Profile :
 Tampilan Log Out :
 
 ![alt text](image.png)
+
+Tampilan Notifikasi
+
+![alt text](image-1.png)
